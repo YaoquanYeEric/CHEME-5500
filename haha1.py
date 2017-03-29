@@ -1,26 +1,15 @@
-import matplotlib.pyplot as plt
-import numpy as np
+from haha import Graph
 
-class Graph(object):
+def f1(x):
+    return x
     
-    def f(x):
-        return x
-    
-    #def __init__(self,func = lambda x: x):
-        #self.func = func
-    
-        
-    def __init__(self,func = f):
-        self.func = func
-    
-    def plot(self):
-        
-        x = np.arange(0, 5, 0.1)
-        y = []
-        for i in np.arange(0, 5, 0.1):
-            y.append(self.func(i))
-            
-        plt.plot(x,y)
-        plt.show()
-        
+def f2(x):
+    return x**2
+
+g1 = Graph(f1)
+g1.plot()
+
+g2 = Graph(f2)
+g2.plot()
+
     
